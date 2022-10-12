@@ -2,26 +2,6 @@
 ## Resumo para entender JAVA
 
 
-#### CARACTERÍSTICAS DO JAVA
-
-Lema do JAVA - Escreva uma vez e execute em qualquer lugar!
-
-A linguagem JAVA é compilada por um bytecode que é interpretado por uma máquina virtual (JVM).Basicamente um sistema de tradução para executar em qq lugar, em qq plataforma.
-
-> Linguagem JAVA - Compilação(JDK) - Interpretação(JVM) - Execução(OS)   
-<br />
-
-##### **IDE** - "um editor". Para desenvolver qq linguagem de programação é necessário um IDE (ambiente de desenvolvimento integrado). Os mais usados são o Intellij, Eclipse e Visual Code.
-
-##### **JAVA DEVELOPMENT KIT ou JDK** - ferramentas para desenvolver programas. Faz parte do funcionamento das IDE'S.
-<br />
-
-##### **Variáveis mais utilizadas**: int, double, boolean e String 
-
-📌 Variável começa com letra minúscula ex: double numero; se for palavra composta modelo camelCase
-
-<br />
-
 ##### **Tipos de Dados**:
 
 . Numéricos: inteiro (byte, short, int, long), ponto flutuante (float, double)
@@ -33,6 +13,8 @@ A linguagem JAVA é compilada por um bytecode que é interpretado por uma máqui
 . Operações Básicas
 
 <br />
+
+📌 Variável começa com letra minúscula ex: double numero; se for palavra composta modelo camelCase
 
 📌 Dica: Java Maiúsculas são diferenciadas de minúsculas
 
@@ -49,7 +31,6 @@ A linguagem JAVA é compilada por um bytecode que é interpretado por uma máqui
 || = or
 
 ! = not
-
 
 
 ##### **CONTROLE DE FLUXO**
@@ -90,113 +71,86 @@ Em For o X é muito usado para representar índide de um array e lenght = tamanh
 
 :warning: **JAVA É UMA PROGRAMAÇÃO ORIENTADA PARA OBJETO**
 
-<br />
 
 Modelo de análise, projeto e programação baseado na aproximação entre o mundo real e o virtual, através da criação e interação entre:
 
 > CLASSES | OBJETOS | MÉTODOS | ATRIBUTOS  | OUTROS 
 
-###### **OBJETO** - item, produto, característica; a partir do mesmo molde, da mesma classe.
+**OBJETO** - item, produto, característica; a partir do mesmo molde, da mesma classe.
 
 ex.: Cliente é o molde, nome-endereço-idade é o molde a ser seguido, Nina e Pedro é o objeto.
 
-###### **CLASSE** - representa o todo; é o molde. 
+INSTANCIAR - é criar. Para isso usa o termo **NEW**
 
-O nome da **classe** deve ter o mesmo nome do arquivo e começar sempre com letra Maiúscula, se tiver uma segunda palavra também escrever com letra Maiúscula ex: PessoaFisica, e evitar abreviações. 
+**CLASSE** - representa o todo; é o molde. SUBSTANTIVO: Carro, Viagem  
 
-ex: public class PessoaFisica {
-
-    **tipo + nome;**  // Declaraçãp de atributos   
-      String nome;   //atributo da classe
-      String cpf;    //atributo da classe
-      int idade;    //atributo da classe
-      
-A classe é pública ou default, mas os atributos podem ser privados. Se um atributo é privado é meio que obrigatório ter Get and Set.
-
-ex: Vamos criar a classe Banco:
-
-**public class Banco {
-
- private String nome;
- **private Cliente[] clientes;** //informação recebida da classe Cliente
- 
-Vamos criar uma segunda classe chamada cliente:
- 
-public class Cliente {
-
- private String cliente; //esses dados podem ser enviados para a classe Banco**
- 
-*O nome do atributo deve começar com letra minúscula, segue o padrão camelCase, deve evitar abreviações e não pode ter caracter especial.*
+O nome da classe deve começar sempre com letra Maiúscula, se tiver uma segunda palavra também escrever com letra Maiúscula ex: PessoaFisica, e evitar abreviações. 
 
 Dentro da classe adotamos os atributos, métodos e construtores.
 
-Numa classe juntamos 3 coisas que precisam para rodar um programa: dados, ações e materialização do conceito.
+Numa classe juntamos 3 coisas que precisam para rodar um programa: dados, ações e materialização do conceito (atributos, métodos e construtores)
 
-O ideal é ter apenas uma classe dentro de cada arquivo.
+**ATRIBUTO** - conceito do mundo real. CARACTERÍSTICA: cor, distância
 
-quando uma classe é final não pode ser herdada. 
+*O nome do atributo deve começar com letra minúscula, segue o padrão camelCase, deve evitar abreviações e não pode ter caracter especial.*
 
-<br />
+**MÉTODO** - tudo o que queremos que aconteça vai estar dentro do método. VERBO: são as **ações**, o comportamento da nossa classe. 
 
-#### **MÉTODO** 
+**MENSAGEM** - o código é executado quando é feita uma requisição. CHAMADA ex: carro.método
 
-Tudo o que queremos que aconteça vai estar dentro do método. São as **ações**, o comportamento da nossa classe. 
-
-É uma porção de código que é disponibilizada por uma classe. É executado quando é feita uma requisição.
-
-São usados para manipular, modificar o valor do atributo do objeto. 
-
-Sua estrutura consiste em: *tipo de controle de acesso*, tipo de retorno, nome do método e tipo de variável recebida.
-
-. Tipo de controle de acesso = visibilidade = pode ser public, private ou protected.
-
-. Tipo de método = concreto ou abstrato
-
-. Modificador = static ou final. Static permite chamar um método a partir de uma classe.
-
-. Tipo de retorno - pode ser do tipo primitivo (int double...) ou do tipo referenciado* (escrever com a 1o. letra maiúscula ex: Conta, String, Date, Cliente). Pode não ter retono, **void** é um apontamento para dizer que o método não retorna nenhum dado. **Return** retorna algo.
-
-ex.: tipo do retorno - (double)
-
-. Nome do método - deve ser escrito no infinitivo, segue o mesmo padrão das variáveis. ex: double **obterRendimento** (String numConta, int mes) {
-
-ex.: nome para o método (obterRendimento)
-
-. Parâmetro = vai estar dentro dos parênteses. O método pode não ter parâmetro ().
-
-ex.: parâmetros para o método (String numConta, int mes)
-
-A passagem de parâmetro pode ser por valor ou por referência (endereço).
-
-. Exceções - são erros que o método pode disparar
-
-Ex. método: A forma + utilizada é public static Retorno Nome (Parâmetro) {corpo}
-
-O corpo do método fica entre {}.
-
-Passagem de mensagem através de uma classe ou objeto. A assinatura é a forma de identificar um método NOME + PARÂMETROS 
-
-ex: calcularTotalVendas (double precoItem1, double precoItem2)
-
-nome() = método vazio
-
-Em métodos usamos o **SET** e o **GET**.
-
-**Chamada de método** - os objetos se comunicam para realizar tarefas, os parâmetros são passados por "cópia.
 
 📌 Usamos um ponto **.** :black_circle: para chamada do método.
 
-ex: conta.debitar(45.0);
 
-conta = variável contendo referência ao objeto
+VISIBILIDADE = Modificadores de acesso ou controle de acesso.
 
-:black_circle: = operador de chamada do método
+- :heavy_plus_sign: public é pública, e pode ser acessada por qualquer pessoa. Visível no universo.
 
-debitar = nome do método chamado
+- #️⃣ protected é protegida, sendo permitida acesso apenas da classe, pacote e subtipos.
 
-(45.0) = parâmetro sendo passado
+- :heavy_minus_sign: private acesso apenas da classe. FAZER GET E SET.
 
-<br />
+- :wavy_dash: default: visível no pacote.
+
+
+Classe **MAIN** - quando uma classe tem o método MAIN, cria os objetos e imprime na tela; 
+
+Método **CONSTRUTOR** - constrói objetos, provê valores aos atributos.
+
+Método **SET** seta valor para um atributo.
+
+
+###### **HERANÇA** - uma extensão, ideia de referência pai - filho. 
+
+O objeto filho herda características dos pais, mas o pai não herda a característica do filho;
+
+Classe B extend Classe A -> B é um subtipo, herda informações, mas nem tudo que está pode ser visto em B.
+
+**POLIFORMISMO** - A mesma ação, o mesmo método, *se comportando* de forma diferente. 
+
+Ex: Pagamento, pode ser processado() de forma diferente, se for boleto, débito, cartão de crédito ou PIX. 
+
+
+**SOBRESCRITA** A mesma ação, o mesmo método, *podendo se comportar* de forma diferente. 
+
+Ex: Uma conta pode ser corrente, poupança, universitária  ou especial. O campo *exibir saldo()* se comporta da mesma forma em Corrente e Universitária, mas se comporta de forma diferente em Especial e Poupança.
+
+###### **ASSOCIAÇÃO** - relação entre classes e objetos. Um usa o outro, interagem entre si. Tipos de associação:
+ 
+> Estrutural
+
+. Composição: "Com parte todo". ex: pessoa e endereço. Se a pessoa deixa de existir o endereço também deixa de existir.
+
+. Agregação: "Sem parte todo". ex: Disciplina e aluno. Se a disciplina ou o aluno deixar de existir o outro nao deixa.
+
+> Comportamental: "Depende de". 
+
+Está nos métodos. ex: existe um método na parte compra que usa cupom, finalizar(). Classe compra depende de cupom. 
+
+###### **INTERFACE** - quando uma classe implementa uma interface ela se compromete a realizar todos os comportamentos que a interface disponibiliza. ex: impressora/computador. No lugar da palavra class aparece interface.
+
+
+###### **PACKAGE** - criado para separar classes com responsabilidades distintas. Na sua criação é indicado usar um lógica de acordo com a responsabilidade de cada classe.
 
 ###### **FUNÇÕES**
 
@@ -204,49 +158,6 @@ Um exemplo de funções é Math. Se digitar MATH. aparece várias funções
 
 ex: int menor = math.min(1, 2);
 indica o menor nr.
-
-###### **CONSTRUTOR** - cria objetos. É o ato de solicitar ao método que o mesmo execute. Pode estar direcionado a um objeto ou a uma classe.
-
-Todo construtor é público para podermos acessar.
-
-    **tipo + nome = //criação do objeto
-     Conta conta  =   new **Conta** ();   
-         
-      
-
-###### **PACKAGE** - ou pasta, bom para organizar as classes em pacotes. Se tiver mais de um package separar por ponto (ex: pasta1.pasta2)
-
-Para dizer ao java que uma classe pertence a um pacote, precisa cria a pasta e declarar na primeira linha que ela pertence aquele pacote, usando o termo package.
-
-ex.:
-
-*package* **com.next.exemplos**;
-
-> public class **Main**{
-
->   public static void main (String[] args) {
- 
->   //escrever codigo
-   
-  }
-
-###### **ABSTRAÇÃO** - capacidade de concentrar nos aspectos que são essenciais, ignorar o que não é importante para o caso;
-
-###### **HERANÇA** - Java trabalha com a ideia de referência pai - filho. O objeto filho herda características dos pais, mas o pai não herda a característica do filho;
-
-Se uma classe está numa hierarquia inferior não precisa repetir as características (atributos e métodos), basta indicar. SuperClasse - SubClasse.
-
-O conceito de extensão é muito presente no java. Com o extense uma classe herda de outra classe. Uma classe não escolhe o filho, o filho que escolhe o pai(classe).
-
-###### **ENCAPSULAMENTO** - termo muito praticado em JAVA, permite deixar tudo organizado, por encapsular os atributos;
-
-###### **COMPOSIÇÃO** - busca representar as relações que os objetos devem ter. Isso faz com que os objetos sejam reaproveitados, evitando duplicidade e mantendo a simplicidade;
-
-###### **POLIFORMISMO** - transforma objetos diferentes em objetos que conseguem trocar mensagem por meio de generalização de suas características;
-
-###### **MÉTODO MAIN** - quando uma classe tem o método MAIN, cria os objetos e imprime na tela; 
-
-###### **INSTANCIAR** - é criar. Para isso usa o termo **NEW**.
 
 ###### **COLLECTION** é um objeto que agrupa múltiplos elementos (variáveis primitivas ou objeto) dentro de uma unidade. Serve para armazenar e processar conjuntos de dados de forma eficiente.
 
@@ -334,20 +245,9 @@ Apresenta 03 partes:
 > Parte do meio: contém os atributos da classe. 
 > Parte inferior: inclui as operações da classe (métodos). As operações descrevem como uma classe interage com dados.
 
-Todas as classes têm diferentes níveis de acesso, dependendo do modificador de acesso (visibilidade). Veja os níveis de acesso com seus símbolos correspondentes:
+ASSOCIAÇÃO DE CLASSE - Descrevem um vínculo que ocorre entre os objetos de uma classe. São representadas por uma linha/seta que liga as classes envolvidas
 
-##### **CONTROLE DE ACESSO DAS CLASSES**
-
-Níveis de acesso de visibilidade:
-
-- :heavy_plus_sign: public é pública, e pode ser acessada por qualquer pessoa. Visível no universo.
-- #️⃣ protected é protegida, sendo permitida acesso apenas da classe e do pacote. E na sub-hierarquia.
-- :heavy_minus_sign: private é privada, sendo permitida acesso apenas da classe. 
-- :wavy_dash: default: visível no pacote.
-
-ASSOCIAÇÃO DE CLASSE - Descrevem um vínculo que ocorre entre os objetos de uma classe. São representadas por uma linha/seta que liga as classes envolvidas.
-
-:construction: **PASSO A PASSO**
+:construction: **PASSO A PASSO PARA PRIMEIRO PROGRAMA**
 
 1. No IDE escolhido, optei pelo Intellij, abra um novo projeto;
 
@@ -400,7 +300,7 @@ ASSOCIAÇÃO DE CLASSE - Descrevem um vínculo que ocorre entre os objetos de um
  19. Se fzer alguma alteração no programa precisa ir em commit, que fica do lado esquerdo da tela. Depois PUSH - GIT - PUSH
  
  
- ### DICAS DE ATALHO 
+ ### DICAS DE ATALHO INTELLIJ
  
  - Organizar a tela CTRL ALT L
  
@@ -425,8 +325,3 @@ ASSOCIAÇÃO DE CLASSE - Descrevem um vínculo que ocorre entre os objetos de um
  - Rodar programa pela primeira vez CTRL + SHIFT + F10
  
  - Rodar programa pela segunda vez SHIFT + F10
- 
- 
-
-
-

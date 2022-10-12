@@ -78,9 +78,11 @@ Modelo de análise, projeto e programação baseado na aproximação entre o mun
 
 **OBJETO** - item, produto, característica; a partir do mesmo molde, da mesma classe.
 
-ex.: Cliente é o molde, nome-endereço-idade é o molde a ser seguido, Nina e Pedro é o objeto.
+ex.: Cliente é o molde, nome-endereço-idade é o molde a ser seguido, Nina e Pedro é o objeto. 
 
-INSTANCIAR - é criar. Para isso usa o termo **NEW**
+Termo THIS pertence ao objeto.
+
+*INSTANCIAR* - é criar. Para isso usa o termo **NEW**
 
 **CLASSE** - representa o todo; é o molde. SUBSTANTIVO: Carro, Viagem  
 
@@ -101,6 +103,7 @@ Numa classe juntamos 3 coisas que precisam para rodar um programa: dados, açõe
 
 📌 Usamos um ponto **.** :black_circle: para chamada do método.
 
+**SOBRECARGA** é mudar uma assinatura.
 
 VISIBILIDADE = Modificadores de acesso ou controle de acesso.
 
@@ -112,6 +115,9 @@ VISIBILIDADE = Modificadores de acesso ou controle de acesso.
 
 - :wavy_dash: default: visível no pacote.
 
+Classe **ABSTRATA** serve o que é dela para o outro. Não pode ser instanciada, portanto não pode usar new.
+
+Serve de contrato, ou seja, diz o que tem que fazer, os direitos e os impedimentos. Ideia de franquia, as outras classes seguem. 
 
 Classe **MAIN** - quando uma classe tem o método MAIN, cria os objetos e imprime na tela; 
 
